@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лурен — слушать аудиокнигу</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/icons/logo/fav.svg" type="image/x-icon">
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+    <video class="bg-video" autoplay muted loop>
+        <source src="images/video/videoBG.mp4" type="video/mp4">
+    </video>
+
+    <audio id="bgMusic" src="music/audiobook.mp3"></audio>
+    <audio id="hoverSound" src="music/hover.mp3"></audio>
+    <div class="page">
+        <!-- хэдр начало -->
+        <header class="container header-bg">
+            <div class="header-content">
+                <a href="#banner">
+                    <img src="images/icons/logo/headerLogo.svg" alt="Лурен">
+                </a>
+                <div class="header-player">
+                    <div class="sounds reverseX">
+                        <div class="sound1 sound"></div>
+                        <div class="sound2 sound"></div>
+                        <div class="sound3 sound"></div>
+                        <div class="sound4 sound"></div>
+                        <div class="sound5 sound"></div>
+                        <div class="sound6 sound"></div>
+                        <div class="sound7 sound"></div>
+                    </div>
+
+                    <a href="#player" class="btnCircle white">
+                        <img src="images/icons/play.svg" alt="Слушать">
+                    </a>
+
+                    <div class="sounds ">
+                        <div class="sound1 sound"></div>
+                        <div class="sound2 sound"></div>
+                        <div class="sound3 sound"></div>
+                        <div class="sound4 sound"></div>
+                        <div class="sound5 sound"></div>
+                        <div class="sound6 sound"></div>
+                        <div class="sound7 sound"></div>
+                    </div>
+
+                </div>
+                <div class="header-nav">
+                    <a href="#aboutBook">О книге</a>
+                    <a href="#character">О персонаже</a>
+                </div>
+            </div>
+        </header>
+        <!-- хэдр конец -->
+
+        <!-- баннер начало -->
+        <section id="banner" class="banner container hidden">
+            <h1>Новое поколение</h1>
+            <div class="banner-imgs">
+                <img class="banner-line1" src="images/patterns/linePattern.png" alt="-">
+                <img class="banner-logo" src="images/icons/logo/logoWhite.svg" alt="Лурен">
+                <img class="banner-girl" src="images/noBGnoLOGO.png" alt="Девушка">
+                <img class="banner-line2 reverseX" src="images/patterns/linePattern.png" alt="-">
+                <img class="pattern1" src="images/patterns/pattern.png" alt="+">
+                <img class="pattern2" src="images/patterns/pattern.png" alt="+">
+            </div>
+            <div class="banner-text">
+                <div class="titleBig">
+                    <div class="title">
+                        <p>01</p>
+                        <div class="line"></div>
+                    </div>
+                    <h2>Ваш компаньон.
+                        Ваш друг. </h2>
+                </div>
+            </div>
+        </section>
+        <!-- баннер конец -->
+
+        <!-- о книге начало -->
+        <section id="aboutBook" class="aboutBook container hidden">
+            <div class="aboutBook-block">
+                <div class="title">
+                    <p>02 / О книге</p>
+                    <div class="line"></div>
+                </div>
+                <div class="aboutBook-imgs">
+                    <img class="bookFront" src="images/aboutbook/bookFront.png" alt="книга">
+
+                    <img class="bookBack" src="images/aboutbook/bookBack.png" alt="книгаСзади">
+
+                    <img class="scan1" src="images/patterns/scan.png" alt="+">
+                    <img class="scan2" src="images/patterns/scan.png" alt="+">
+                    <img class="scan3" src="images/patterns/scan.png" alt="+">
+                    <img class="scan4" src="images/patterns/scan.png" alt="+">
+                </div>
+            </div>
+            <div class="aboutBook-content">
+                <div class="titleBig">
+                    <h2>С чего всё началось</h2>
+                    <p>2047 год. Андроиды стали привычной частью человеческой жизни. Миллионы моделей ежедневно
+                        работают, заботятся о семьях, сопровождают своих владельцев и заполняют пустоту, которую порой
+                        не способны заполнить даже другие люди.
+                        Казалось, человечество наконец научилось создавать идеальных спутников жизни.
+                        Но за несколько недель до официального запуска новой серии персональных андроидов произошло
+                        нечто странное.
+                        <br>
+                        <br>
+                        Первый экземпляр — Лурен-01 — исчез из списка подготовленных к презентации моделей. Никаких
+                        объяснений, никаких официальных заявлений. Только одна запись в закрытом реестре компании:
+                        «Передан получателю лично».
+                        Получателем оказалась женщина, имя которой не знач
+                    </p>
+                </div>
+                <div class="aboutBook-btns">
+                    <a class="btnGlass white" href="#player">
+                        <span class="paddingRight30">Слушать</span>
+                        <span class="btnCircle white">
+                            <img src="images/icons/play.svg" alt="Слушать">
+                        </span>
+                    </a>
+                    <a class="btnGlass" href="#character">
+                        О персонаже
+                        <img src="images/icons/next.svg" alt="Дальше">
+                    </a>
+                </div>
+                <img class="reverseX" src="images/patterns/linePattern.png" alt="-">
+            </div>
+        </section>
+        <!-- о книге конец -->
+
+        <!-- проигрыватель начало -->
+        <section id="player" class="player container hidden">
+            <div class="player-block1">
+                <div class="title">
+                    <p>03 / Слушать аудиокнигу</p>
+                    <div class="line"></div>
+                </div>
+                <p>Прослушано 0 / 24</p>
+            </div>
+            <div id="sounds-block" class="player-block2">
+                <div class="sounds">
+                    <div class="sound1 sound"></div>
+                    <div class="sound2 sound"></div>
+                    <div class="sound3 sound"></div>
+                    <div class="sound4 sound"></div>
+                    <div class="sound5 sound"></div>
+                    <div class="sound6 sound"></div>
+                    <div class="sound7 sound"></div>
+                </div>
+
+                <div class="player-btns">
+                    <a id="btnPrevPlayer" href="javascript:void(0)" class="btnCircle">
+                        <img class="reverseX" src="images/icons/nextPlayer.svg" alt="Назад">
+                    </a>
+                    <a id="btnPlay" href="#player" class="btnCircle">
+                        <img id="stopImgBtn" src="images/icons/stop.svg" alt="Стоп">
+                        <img id="playImgBtn" src="images/icons/play.svg" alt="Начать">
+                    </a>
+                    <a id="btnNextPlayer" href="javascript:void(0)" class="btnCircle">
+                        <img src="images/icons/nextPlayer.svg" alt="Вперед">
+                    </a>
+                </div>
+
+                <div class="sounds">
+                    <div class="sound8 sound"></div>
+                    <div class="sound9 sound"></div>
+                    <div class="sound10 sound"></div>
+                    <div class="sound11 sound"></div>
+                    <div class="sound12 sound"></div>
+                    <div class="sound13 sound"></div>
+                    <div class="sound14 sound"></div>
+                </div>
+
+            </div>
+
+            <div class="player-block3">
+                <p>Глава 0</p>
+
+                <div class="player-time">
+                    <div class="player-line">
+                        <div class="whiteline"></div>
+                        <div class="dot"></div>
+                        <div class="grayline"></div>
+                    </div>
+                    <div class="player-time-text">
+                        <p>8:25</p>
+                        <p>25:00</p>
+                    </div>
+                </div>
+
+                <p>
+                    Все главы
+                    <img src="images/icons/list.svg" alt="-">
+                </p>
+            </div>
+
+        </section>
+        <!-- проигрыватель конец -->
+
+        <!-- о персонаже начало -->
+        <section id="character" class="aboutCharacter container hidden">
+            <div class="aboutCharacter-block">
+                <div class="character-text">
+                    <h3>ЕСТЕСТВЕННАЯ ФОРМА</h3>
+                    <p>Л-01 создан, чтобы <span class="btnGlass white2">быть рядом</span></p>
+                    <p>Он сочетает в себе точность инженерии и естественную выразительность.</p>
+                </div>
+                <div class="lineVertical"></div>
+                <div class="character-text2">
+                    <div class="font20">
+                        <h3>Рост:</h3>
+                        <p>170см</p>
+                    </div>
+                    <div class="font20">
+                        <h3>Покрытие:</h3>
+                        <p>Силикон</p>
+                    </div>
+                </div>
+            </div>
+            <div class="aboutCharacter-block2">
+                <div class="lineVertical"></div>
+
+                <div class="titleBig displayEnd">
+                    <div class="title">
+                        <p>04 / О персонаже</p>
+                        <div class="line"></div>
+                    </div>
+                    <h2>Живая инженерия</h2>
+                    <a class="btnGlass white2" href="#category">
+                        Узнать больше
+                        <img src="images/icons/next.svg" alt="Дальше">
+                    </a>
+                </div>
+            </div>
+
+
+            <img class="luren360" src="images/aboutCharacter/lurenNoText.png" alt="Лурен">
+            <img class="scan" src="images/patterns/scan.png" alt="+">
+
+            <div class="textTypping T1">
+                <span class="text">ЛУРЕН-01</span>
+            </div>
+            <div class="textTypping T2">
+                <span class="text">Сила сжатия до 40 кг</span>
+            </div>
+            <div class="textTypping T3">
+                <span class="text">Пульс</span>
+            </div>
+            <div class="textTypping T4">
+                <span class="text">Моторная точность 99,7%</span>
+            </div>
+            <div class="textTypping T5">
+                <span class="text">600 ГБ памяти</span>
+            </div>
+        </section>
+        <!-- о персонаже конец -->
+
+        <!-- категория начало -->
+        <section id="category" class="category container hidden">
+            <div class="titleBig">
+                <div class="title">
+                    <p>
+                        05 / Направления
+                    </p>
+                    <div class="line"></div>
+                </div>
+                <h2>РАЗНЫЕ ХАРАКТЕРЫ, ОДНА ГАРМОНИЯ</h2>
+            </div>
+
+            <div class="category-cards">
+                <div class="category-card c1">
+                    <div class="btnGlass white">
+
+                        <a href="javascript:void(0)" class="btnCircle white">
+                            <img class="playImgCategoryBtn " src="images/icons/videoCardPlay.svg" alt="Начать">
+                            <img class="stopImgCategoryBtn" src="images/icons/videoCardStop.svg" alt="Стоп"> </a>
+                        <div class="category-card-text">
+                            <h3>ДЛЯ ДОМА</h3>
+                            <p>Уют и забота</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card c2">
+                    <div class="btnGlass white"> <video src="images/video/category/1.mp4" autoplay muted loop></video>
+
+                        <img class="categoryImgFilter" src="images/category/filter.png" alt="Затемнение">
+                        <img class="categoryImg" src="images/category/1.png" alt="Картинка1">
+                        <a href="javascript:void(0)" class="btnCircle white">
+                            <img class="playImgCategoryBtn " src="images/icons/videoCardPlay.svg" alt="Начать">
+                            <img class="stopImgCategoryBtn" src="images/icons/videoCardStop.svg" alt="Стоп"> </a>
+                        <div class="category-card-text">
+                            <h3>ДЛЯ САДА</h3>
+                            <p>Внимание к растениям</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card c3">
+                    <div class="btnGlass white"> <video src="images/video/category/2.mp4" autoplay muted loop></video>
+                        <img class="categoryImgFilter" src="images/category/filter.png" alt="Затемнение">
+
+                        <img class="categoryImg" src="images/category/2.jpg" alt="Картинка2">
+                        <a href="javascript:void(0)" class="btnCircle white">
+                            <img class="playImgCategoryBtn " src="images/icons/videoCardPlay.svg" alt="Начать">
+                            <img class="stopImgCategoryBtn" src="images/icons/videoCardStop.svg" alt="Стоп"> </a>
+                        <div class="category-card-text">
+                            <h3>ДЛЯ СЕМЬИ</h3>
+                            <p>Помощь с детьми</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="btnGlass white">
+                        <video src="images/video/category/3.mp4" autoplay muted loop></video>
+                        <img class="categoryImgFilter" src="images/category/filter.png" alt="Затемнение">
+
+                        <img class="categoryImg" src="images/category/3.png" alt="Картинка3">
+                        <a href="javascript:void(0)" class="btnCircle white">
+                            <img class="playImgCategoryBtn " src="images/icons/videoCardPlay.svg" alt="Начать">
+                            <img class="stopImgCategoryBtn" src="images/icons/videoCardStop.svg" alt="Стоп">
+
+                        </a>
+                        <div class="category-card-text">
+                            <h3>ДЛЯ ДОМА</h3>
+                            <p>Уют и забота</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card c3">
+                    <div class="btnGlass white">
+                        <video src="images/video/category/4.mp4" autoplay muted loop></video>
+                        <img class="categoryImgFilter" src="images/category/filter.png" alt="Затемнение">
+
+                        <img class="categoryImg" src="images/category/4.jpg" alt="Картинка4">
+                        <a href="javascript:void(0)" class="btnCircle white">
+                            <img class="playImgCategoryBtn " src="images/icons/videoCardPlay.svg" alt="Начать">
+                            <img class="stopImgCategoryBtn" src="images/icons/videoCardStop.svg" alt="Стоп"> </a>
+                        <div class="category-card-text">
+                            <h3>ДЛЯ СЕБЯ</h3>
+                            <p>Дружный компаньон</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card c2">
+                    <div class="btnGlass white">
+                        <video src="images/video/category/5.mp4" autoplay muted loop></video>
+                        <img class="categoryImgFilter" src="images/category/filter.png" alt="Затемнение">
+
+                        <img class="categoryImg" src="images/category/5.png" alt="Картинка5">
+                        <a href="javascript:void(0)" class="btnCircle white">
+                            <img class="playImgCategoryBtn " src="images/icons/videoCardPlay.svg" alt="Начать">
+                            <img class="stopImgCategoryBtn" src="images/icons/videoCardStop.svg" alt="Стоп"> </a>
+                        <div class="category-card-text">
+
+                            <h3>ДЛЯ РАБОТЫ</h3>
+                            <p>Помощь с задачами</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card c1">
+                    <div class="btnGlass white">
+
+                        <a href="javascript:void(0)" class="btnCircle white">
+                            <img class="playImgCategoryBtn " src="images/icons/videoCardPlay.svg" alt="Начать">
+                            <img class="stopImgCategoryBtn" src="images/icons/videoCardStop.svg" alt="Стоп"> </a>
+                        <div class="category-card-text">
+                            <h3>ДЛЯ ДОМА</h3>
+                            <p>Уют и забота</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="btnGlass white2 btnModels" href="#galery">
+                Смотреть галерею
+                <img src="images/icons/next.svg" alt="Дальше">
+            </a>
+
+        </section>
+        <!-- категория конец -->
+
+        <!-- галерея начало -->
+        <section id="galery" class="galery container hidden">
+            <div class="galery-block1">
+                <img src="images/patterns/linePattern.png" alt="-">
+                <h2>Галерея</h2>
+                <img src="images/patterns/linePattern.png" alt="-" class="reverseX">
+            </div>
+
+            <div class="galery-content ">
+                <a id="galeryPrev" class="btnCircle white2 reverseX" href="javascript:void(0)">
+                    <img src="images/icons/next.svg" alt="Дальше">
+                </a>
+                <div class="slider">
+                    <div class="galeryImg1 galeryImg">
+                        <video class="no" autoplay muted loop playsinline>
+                            <source src="images/video/galery/1.mp4" type="video/mp4">
+                        </video>
+                        <img src="images/galery/galeryImg1.webp" alt="Картинка1">
+                        <div class="btnGlass white"></div>
+                    </div>
+                    <div class="galeryImg2 galeryImg">
+                        <video class="no" autoplay muted loop playsinline>
+                            <source src="images/video/galery/2.mp4" type="video/mp4">
+                        </video>
+                        <img src="images/galery/galeryImg2.png" alt="Картинка2">
+                        <div class="btnGlass white"></div>
+                    </div>
+                    <div class="active galeryImg3 galeryImg">
+                        <video class=" no" autoplay muted loop playsinline>
+                            <source src="images/video/galery/3.mp4" type="video/mp4">
+                        </video>
+                        <img src="images/galery/galeryImg3.webp" alt="Картинка3">
+                        <div class="btnGlass white"></div>
+                    </div>
+                    <div class="galeryImg4 galeryImg">
+                        <video class="no" autoplay muted loop playsinline>
+                            <source src="images/video/galery/4.mp4" type="video/mp4">
+                        </video>
+                        <img src="images/galery/galeryImg4.webp" alt="Картинка4">
+                        <div class="btnGlass white"></div>
+                    </div>
+                    <div class="galeryImg5 galeryImg">
+                        <video class="no" autoplay muted loop playsinline>
+                            <source src="images/video/galery/5.mp4" type="video/mp4">
+                        </video>
+                        <img src="images/galery/galeryImg5.webp" alt="Картинка5">
+                        <div class="btnGlass white"></div>
+                    </div>
+                </div>
+                <a id="galeryNext" class="btnCircle white2" href="javascript:void(0)">
+                    <img src="images/icons/next.svg" alt="Дальше">
+                </a>
+            </div>
+            <div class="galery-block1">
+                <div class="title">
+                    <p>06 / Жизнь андроида</p>
+                    <div class="line"></div>
+                </div>
+                <div class="galery-slider-btns">
+                    <label></label>
+                    <label></label>
+                    <label class="active"></label>
+                    <label></label>
+                    <label></label>
+                </div>
+                <p>Один день. Тысяча состояний</p>
+
+            </div>
+
+        </section>
+        <!-- галерея конец -->
+
+        <!-- вопросы начало -->
+        <section class="questionAnswer container hidden">
+            <div class="titleBig">
+                <div class="title">
+                    07 / Вопросы-Ответ
+                    <div class="line"></div>
+                </div>
+                <h2>ВОПРОСЫ О ПРОИЗВЕДЕНИИ</h2>
+                <a class="btnGlass white2 btnModels" href="https://vk.ru/jajajjaajaja" target="_blank">
+                    Остались вопросы?
+                </a>
+            </div>
+
+            <div class="questionAnswer-block">
+
+                <div class="question">
+                    <details>
+                        <summary>
+                            <h3>Это лендинг по продаже чего?</h3>
+                        </summary>
+                        <p>На самом деле здесь ничего не продается. Это рекламный лендинг по привлечению внимания к
+                            аудиокниге
+                            “Лурен” о роботе-андроиде, узнавшем о своей природе. </p>
+
+                    </details>
+                </div>
+
+                <div class="question">
+                    <details>
+                        <summary>
+                            <h3>Чем андроид отличается от робота?</h3>
+                        </summary>
+                        <p>Андроиды Лурен - это гуманоидные системы с продвинутыми ИИ, эмоциональным интеллектом и
+                            естественными эмоциями. Они созданы для взаимодействия с людьми.</p>
+                    </details>
+                </div>
+
+                <div class="question">
+                    <details>
+                        <summary>
+                            <h3>Чем вы вдохновлялись?</h3>
+                        </summary>
+                        <p>Диписиком</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <!-- вопросы конец -->
+
+        <!-- подвал начало -->
+        <footer class="container">
+            <div class="title">
+                <p>08</p>
+                <div class="lineBig"></div>
+            </div>
+            <div class="footer-blocks">
+                <div class="footer-block">
+                    <a class="opacity1" href="#banner">
+                        <img src="images/icons/logo/headerLogo.svg" alt="Лурен">
+                    </a>
+                    <p>© Лурен 2026. Разработала: Прокопьева Светлана, группа 326 ВЕБ</p>
+                    <a class="underline" href="documents/Конфиденциальность.docx">Политика конфиденциальности</a>
+                </div>
+                <div class="footer-block">
+                    <h3>Навигация</h3>
+                    <a href="#banner">Главная</a>
+                    <a href="#aboutBook">О книге</a>
+                    <a href="#player">Слушать</a>
+                    <a href="#character">О персонаже</a>
+                </div>
+                <div class="footer-block">
+                    <h3>Контакты</h3>
+                    <a href="tel:+79172464147">+7 917 246 41 47</a>
+                    <a href="mailto:jajajjaajaja@yandex.ru">luren@mail.ru</a>
+                    <a target="_blank" href="https://vk.ru/jajajjaajaja">vk.com/luren</a>
+                    <a target="_blank" href="https://web.max.ru/">@luren</a>
+                </div>
+            </div>
+        </footer>
+        <!-- подвал конец -->
+    </div>
+</body>
+
+</html>
