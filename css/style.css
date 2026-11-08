@@ -442,7 +442,7 @@ section {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 44%;
+        top: 47%;
         z-index: 1;
         text-transform: uppercase;
     }
