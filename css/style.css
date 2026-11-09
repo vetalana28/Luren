@@ -1351,7 +1351,6 @@ section {
                 background: url(../images/icons/next.svg) center / contain no-repeat;
                 transform: rotate(90deg);
                 transition: 0.2s;
-
             }
         }
 
@@ -1444,3 +1443,31 @@ footer {
 
 }
 /* повадл конец */
+
+/* ползунок плеера: зона клика + без transition (двигается через JS) */
+.player-block3 .player-time .player-line {
+    cursor: pointer;
+    touch-action: none;
+    user-select: none;
+}
+
+.player-block3 .player-time .player-line::after {
+    content: "";
+    position: absolute;
+    inset: -14px 0;
+}
+
+.player-block3 .player-time .player-line .whiteline,
+.player-block3 .player-time .player-line .dot {
+    transition: none;
+    pointer-events: none;
+}
+
+.player-block3 .player-time .player-line:hover .dot,
+.player-block3 .player-time .player-line.dragging .dot {
+    transform: scale(1.4);
+}
+
+.player-block3 .player-time .player-line .dot {
+    transition: transform 0.2s;
+}
