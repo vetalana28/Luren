@@ -16,7 +16,7 @@
         <source src="images/video/videoBG.mp4" type="video/mp4">
     </video>
 
-    <audio id="bgMusic" src="music/audiobook.mp3"></audio>
+    <audio id="bgMusic" src="music/audiobook.mp3" preload="metadata"></audio>
     <audio id="hoverSound" src="music/hover.mp3"></audio>
     <div class="page">
         <!-- хэдр начало -->
@@ -51,10 +51,10 @@
                     </div>
 
                 </div>
-                <div class="header-nav">
+                <nav class="header-nav">
                     <a href="#aboutBook">О книге</a>
                     <a href="#character">О персонаже</a>
-                </div>
+                </nav>
             </div>
         </header>
         <!-- хэдр конец -->
@@ -184,14 +184,14 @@
                 <p>Глава 0</p>
 
                 <div class="player-time">
-                    <div class="player-line">
+                    <div class="player-line" id="playerLine">
                         <div class="whiteline"></div>
                         <div class="dot"></div>
                         <div class="grayline"></div>
                     </div>
                     <div class="player-time-text">
-                        <p>8:25</p>
-                        <p>25:00</p>
+                        <p id="timeCurrent">0:00</p>
+                        <p id="timeTotal">0:00</p>
                     </div>
                 </div>
 
@@ -288,7 +288,8 @@
                     </div>
                 </div>
                 <div class="category-card c2">
-                    <div class="btnGlass white"> <video src="images/video/category/1.mp4" autoplay muted loop></video>
+                    <div class="btnGlass white"> 
+                        <video src="images/video/category/1.mp4" autoplay muted loop></video>
 
                         <img class="categoryImgFilter" src="images/category/filter.png" alt="Затемнение">
                         <img class="categoryImg" src="images/category/1.png" alt="Картинка1">
@@ -479,13 +480,12 @@
                         <summary>
                             <h3>Это лендинг по продаже чего?</h3>
                         </summary>
-                        <p>На самом деле здесь ничего не продается. Это рекламный лендинг по привлечению внимания к
-                            аудиокниге
+                        <p>На самом деле здесь ничего не продается. Это рекламный лендинг 
+                            по привлечению внимания к аудиокниге
                             “Лурен” о роботе-андроиде, узнавшем о своей природе. </p>
 
                     </details>
                 </div>
-
                 <div class="question">
                     <details>
                         <summary>
@@ -522,13 +522,13 @@
                     <p>© Лурен 2026. Разработала: Прокопьева Светлана, группа 326 ВЕБ</p>
                     <a class="underline" href="documents/Конфиденциальность.docx">Политика конфиденциальности</a>
                 </div>
-                <div class="footer-block">
+                <nav class="footer-block">
                     <h3>Навигация</h3>
                     <a href="#banner">Главная</a>
                     <a href="#aboutBook">О книге</a>
                     <a href="#player">Слушать</a>
                     <a href="#character">О персонаже</a>
-                </div>
+                </nav>
                 <div class="footer-block">
                     <h3>Контакты</h3>
                     <a href="tel:+79172464147">+7 917 246 41 47</a>
